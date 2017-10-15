@@ -4,6 +4,7 @@
   "private": true,
   "devDependencies": {
     "cross-env": "^4.0.0",
+    "jest": "^21.2.1",
     "react-scripts": "0.9.5"
   },
   "dependencies": {
@@ -25,7 +26,10 @@
   "scripts": {
     "start": "cross-env PORT=4100 react-scripts start",
     "build": "react-scripts build",
-    "test": "cross-env PORT=4100 react-scripts test --env=jsdom",
+    "test:old": "cross-env PORT=4100 react-scripts test --env=jsdom",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
     "eject": "react-scripts eject"
   }
 }
